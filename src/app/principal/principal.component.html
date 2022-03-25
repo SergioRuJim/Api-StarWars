@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <app-header></app-header>
+    </div>
+    <div class="container mt-3 content">
+        <p *ngIf="usuario" class="text-center">Bienvenid@ {{usuario.name}} {{usuario.surname}} a tu área de formación online.</p>
+        <router-outlet></router-outlet>
+    </div>
+    <div class="row">
+        <app-footer></app-footer>
+    </div>
+</div>
