@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClient, HttpClientModule } from'@angular/common/http';
 import { PrincipalService } from './servicio/principal.service';
+import { PaginacionService } from './servicio/paginacion.service';
 import {NgxPaginationModule} from 'ngx-pagination'; 
 
 import { AppComponent } from './app.component';
@@ -35,7 +36,7 @@ const routes: Routes = [
     HttpClientModule,
     NgxPaginationModule
   ],
-  providers: [PrincipalService],
+  providers: [PrincipalService, PaginacionService],
   bootstrap: [PrincipalComponent]
 })
 export class AppModule { }
