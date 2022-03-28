@@ -19,6 +19,8 @@ export class PaginacionService {
   }
 
   listarPersonajesFiltrados(name: string, gender: string):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/people?name=" + name + "&gender=" +gender);
+    if(gender == "")
+      return this.httpClient.get("http://localhost:3000/people?name_like=" + name + "&gender_like=" +gender);
+    return this.httpClient.get("http://localhost:3000/people?name_like=" + name + "&gender=" +gender);
   }
 }

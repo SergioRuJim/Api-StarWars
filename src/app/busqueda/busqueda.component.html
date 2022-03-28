@@ -1,21 +1,25 @@
 <h4>{{'main.characterSearch'|translate}}:</h4>
-<div class="row g-2 align-items-center m-3">
+<div class="row g-2 align-items m-3">
     <div class="col-auto">
       <label for="nombre" class="col-form-label color-morado">{{'main.name'|translate}}:</label>
     </div>
-    <div class="col-auto">
-      <input type="text" id="nombre" class="form-control" [(ngModel)]="nombre">
+    <div class="col-auto" [formGroup]="formBusqueda">
+      <input type="text" id="nombre" class="form-control " formControlName="nombre"> 
+      <div *ngIf="f['nombre'].errors" id="usuarioHelp" class="form-text color-red">*Obligatorio</div>
     </div>
     <div class="col-auto">
         <label for="genero" class="col-form-label color-morado">{{'main.gender'|translate}}:</label>
       </div>
       <div class="col-auto">
         <select  [(ngModel)]="seleccionado" class="form-select" aria-label="Default select example" >
-            <option [value]="genero" *ngFor="let genero of generos;let index = index" [selected]="index == 1" >{{genero}}</option>
+            <option [value]="genero" *ngFor="let genero of generos" >{{genero}}</option>
           </select>
       </div>
       <div class="col-auto ms-2">
-        <button type="button" class="btn btn-primary btn-sm" (click)="filtrarPersonajes()">{{'main.search'|translate}}</button>
+        <button *ngIf="!f['nombre'].errors;else desactivado" type="button" class="btn btn-primary btn-sm" (click)="filtrarPersonajes()">{{'main.search'|translate}}</button>
+        <ng-template #desactivado>
+          <button type="submit" class="btn btn-primary btn-sm" (click)="filtrarPersonajes()" disabled>{{'main.search'|translate}}</button>
+      </ng-template>
         <button type="button" class="btn btn-secondary btn-sm m-1" (click)="limpiarPersonajes()">{{'main.clean'|translate}}</button>
       </div>
   </div>
