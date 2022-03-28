@@ -1,0 +1,20 @@
+{
+    "main":{
+        "language":"idioma",
+        "spanish": "Español",
+        "english": "Inglés",
+        "favorites": "Favoritos",
+        "characterSearch": "Busqueda de personajes",
+        "name": "Nombre",
+        "gender": "Género",
+        "search": "Buscar",
+        "clean": "Limpiar",
+        "height": "Alto",
+        "weight": "Peso",
+        "characterList": "Listado de personajes",
+        "characterFavorites": "Listado de favoritos",
+        "welcome": "Bienvenid@ {{name}} {{surname}} a tu área de formación online.",
+        "previousLabel": "Anterior",
+        "nextLabel": "Siguiente"
+    }
+}

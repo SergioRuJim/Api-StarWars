@@ -1,0 +1,20 @@
+{
+    "main":{
+        "language":"idioma",
+        "spanish": "Español",
+        "english": "Inglés",
+        "favorites": "Favorites",
+        "characterSearch": "Character search",
+        "name": "Name",
+        "gender": "Gender",
+        "search": "Search",
+        "clean": "Clean",
+        "height": "Height",
+        "weight": "Weight",
+        "characterList": "Character list",
+        "characterFavorites": "Character favorites",
+        "welcome": "Welcome {{name}} {{surname}} to your online training area.",
+        "previousLabel": "Previous",
+        "nextLabel": "Next"
+    }
+}

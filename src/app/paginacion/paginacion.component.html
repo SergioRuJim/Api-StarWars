@@ -1,10 +1,10 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Altura</th>
-        <th scope="col">Peso</th>
-        <th scope="col">Genero</th>
+        <th scope="col">{{'main.name'|translate}}</th>
+        <th scope="col">{{'main.height'|translate}}</th>
+        <th scope="col">{{'main.weight'|translate}}</th>
+        <th scope="col">{{'main.gender'|translate}}</th>
       </tr>
     </thead>
     <tbody>
@@ -16,4 +16,5 @@
       </tr>
     </tbody>
   </table>
-  <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
+  <pagination-controls (pageChange)="pageActual = $event" previousLabel="{{'main.previousLabel'|translate}}"
+  nextLabel="{{'main.nextLabel'|translate}}"></pagination-controls>

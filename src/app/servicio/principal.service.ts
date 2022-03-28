@@ -10,6 +10,6 @@ export class PrincipalService {
   constructor(private httpClient:HttpClient) { }
 
   listarUsuario():Observable<any>{
-    return this.httpClient.get("https://jsonplaceholder.typicode.com/users");
+    return this.httpClient.get("https://jsonplaceholder.typicode.com/users/1");
   }
 }

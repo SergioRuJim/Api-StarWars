@@ -3,7 +3,7 @@
         <app-header></app-header>
     </div>
     <div class="container mt-3 content">
-        <p *ngIf="usuario" class="text-center">Bienvenid@ {{usuario.name}} {{usuario.surname}} a tu área de formación online.</p>
+        <p *ngIf="usuario" class="text-center color-morado" >{{'main.welcome'|translate:{'name':usuario.name,'surname':usuario.username} }}</p>
         <router-outlet></router-outlet>
     </div>
     <div class="row">

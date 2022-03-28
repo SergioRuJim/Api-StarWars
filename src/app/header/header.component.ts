@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  idiomas:string[] = ["Inglés", 'Español'];
+
+  seleccionado: any = "Español";
+
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
+  }
+
+  cambiarIdioma(){
+    if(this.seleccionado == "Español"){
+      this.translate.use('es');
+    }else{
+      this.translate.use('en');
+    }
   }
 
 }

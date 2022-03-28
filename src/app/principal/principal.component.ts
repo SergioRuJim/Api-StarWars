@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrincipalService } from '../servicio/principal.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-principal',
@@ -12,7 +13,9 @@ export class PrincipalComponent implements OnInit {
   page: number = 1;
   pageSize: number = 2;
   
-  constructor(private principalService: PrincipalService) { 
+  constructor(private principalService: PrincipalService, translate: TranslateService) { 
+    translate.setDefaultLang('es');
+    translate.use('es');
     this.listarUsuario();
   }
 

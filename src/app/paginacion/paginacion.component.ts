@@ -36,4 +36,11 @@ export class PaginacionComponent implements OnInit {
       error: (e) => console.log(JSON.stringify(e))
     });
   }
+  
+  listarPersonajesFiltrados(nombre: string, genero:string){
+    this.paginacionService.listarPersonajesFiltrados(nombre, genero).subscribe({
+      next: (r) => this.items = r,
+      error: (e) => console.log(JSON.stringify(e))
+    });
+  }
 }
